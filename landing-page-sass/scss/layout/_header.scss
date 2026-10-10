@@ -1,0 +1,128 @@
+// ============================================
+// HEADER & NAVIGATION
+// ============================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $color-white;
+  box-shadow: $shadow-sm;
+  height: $header-height;
+
+  &__inner {
+    @include container;
+    @include flex-between;
+    height: 100%;
+  }
+
+  &__logo {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    color: $color-primary;
+    letter-spacing: -0.5px;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: $spacing-xl;
+
+    a {
+      font-weight: 500;
+      color: $color-gray-800;
+      transition: color $transition-fast;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $color-primary;
+        transition: width $transition-base;
+      }
+
+      &:hover {
+        color: $color-primary;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    @include btn-primary;
+    padding: 0.5rem 1.25rem;
+    font-size: $font-size-sm;
+  }
+
+  // Mobile menu button (hidden on desktop)
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: $color-primary;
+  }
+
+  @include respond-to(md) {
+    &__nav {
+      display: none;
+    }
+    &__cta {
+      display: none;
+    }
+    &__toggle {
+      display: block;
+    }
+  }
+}
+
+// Hero section under header
+.hero {
+  background: linear-gradient(135deg, $color-primary-dark 0%, $color-primary 50%, $color-primary-light 100%);
+  color: $color-white;
+  padding: $spacing-3xl 0;
+  text-align: center;
+
+  &__title {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 700;
+    margin-bottom: $spacing-md;
+    color: $color-white;
+  }
+
+  &__desc {
+    font-size: $font-size-lg;
+    max-width: 560px;
+    margin: 0 auto $spacing-xl;
+    opacity: 0.9;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    @include btn-accent;
+  }
+
+  &__btn-outline {
+    @include btn-outline;
+  }
+}

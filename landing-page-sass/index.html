@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenShop – Landing Page | Tái cấu trúc SASS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ========== 1. HEADER + NAVIGATION ========== -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">Green<span>Shop</span></a>
+      <nav class="header__nav">
+        <a href="#products">Sản phẩm</a>
+        <a href="#stats">Thống kê</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+      <a href="#products" class="header__cta">Mua ngay</a>
+      <button class="header__toggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="hero__title">Sản phẩm xanh – Cuộc sống lành</h1>
+    <p class="hero__desc">
+      Khám phá bộ sưu tập sản phẩm thân thiện môi trường, 
+      chất lượng cao và giá cả hợp lý.
+    </p>
+    <div class="hero__actions">
+      <a href="#products" class="hero__btn">Xem sản phẩm</a>
+      <a href="#stats" class="hero__btn-outline">Xem thống kê</a>
+    </div>
+  </section>
+
+  <!-- ========== 2. SẢN PHẨM NỔI BẬT ========== -->
+  <section class="products" id="products">
+    <h2 class="section-title">Sản phẩm nổi bật</h2>
+    <p class="section-subtitle">Những sản phẩm được yêu thích nhất tháng này</p>
+
+    <div class="products__grid">
+      <article class="product-card">
+        <div class="product-card__image">🌱</div>
+        <div class="product-card__body">
+          <h3 class="product-card__title">Organic Serum</h3>
+          <p class="product-card__desc">Serum dưỡng da chiết xuất từ thiên nhiên, không hóa chất độc hại.</p>
+          <div class="product-card__price">299.000 ₫</div>
+          <a href="#" class="product-card__btn">Thêm vào giỏ</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__image">🧴</div>
+        <div class="product-card__body">
+          <h3 class="product-card__title">Eco Body Wash</h3>
+          <p class="product-card__desc">Sữa tắm hữu cơ, bao bì tái chế, hương thơm dịu nhẹ.</p>
+          <div class="product-card__price">189.000 ₫</div>
+          <a href="#" class="product-card__btn">Thêm vào giỏ</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__image">☕</div>
+        <div class="product-card__body">
+          <h3 class="product-card__title">Bamboo Cup</h3>
+          <p class="product-card__desc">Cốc tre tự nhiên, bền đẹp, thay thế hoàn hảo cho ly nhựa.</p>
+          <div class="product-card__price">129.000 ₫</div>
+          <a href="#" class="product-card__btn">Thêm vào giỏ</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== 3. SỐ LIỆU THỐNG KÊ ========== -->
+  <section class="stats" id="stats">
+    <h2 class="section-title">Con số ấn tượng</h2>
+    <p class="section-subtitle">Những thành tựu chúng tôi đã đạt được cùng khách hàng</p>
+
+    <div class="stats__grid">
+      <div class="stat-item">
+        <div class="stat-item__number">15K+</div>
+        <div class="stat-item__label">Khách hàng hài lòng</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__number">120+</div>
+        <div class="stat-item__label">Sản phẩm xanh</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__number">98%</div>
+        <div class="stat-item__label">Đánh giá tích cực</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__number">5</div>
+        <div class="stat-item__label">Năm kinh nghiệm</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4. FOOTER ========== -->
+  <footer class="footer" id="contact">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <h3>Green<span>Shop</span></h3>
+        <p>Mang đến những sản phẩm thân thiện với môi trường, giúp bạn sống xanh hơn mỗi ngày.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="#">Chăm sóc da</a></li>
+          <li><a href="#">Đồ gia dụng</a></li>
+          <li><a href="#">Thực phẩm</a></li>
+          <li><a href="#">Phụ kiện</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="#">Hướng dẫn mua hàng</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Công ty</h4>
+        <ul>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Tuyển dụng</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Đối tác</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 GreenShop. All rights reserved.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">ig</a>
+        <a href="#" aria-label="YouTube">yt</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

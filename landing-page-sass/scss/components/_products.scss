@@ -1,0 +1,73 @@
+// ============================================
+// FEATURED PRODUCTS
+// ============================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.products {
+  @include section-padding;
+  background: $color-off-white;
+
+  &__grid {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-xl;
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.product-card {
+  @include card;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    height: 200px;
+    background: linear-gradient(135deg, $color-gray-100, $color-gray-300);
+    @include flex-center;
+    font-size: 3rem;
+    color: $color-primary;
+  }
+
+  &__body {
+    padding: $spacing-lg;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-sm;
+    color: $color-primary-dark;
+  }
+
+  &__desc {
+    color: $color-gray-600;
+    font-size: $font-size-sm;
+    margin-bottom: $spacing-md;
+    flex: 1;
+  }
+
+  &__price {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    color: $color-primary;
+    margin-bottom: $spacing-md;
+  }
+
+  &__btn {
+    @include btn-primary;
+    text-align: center;
+    width: 100%;
+  }
+}
